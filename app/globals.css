@@ -108,6 +108,12 @@ button { -webkit-tap-highlight-color: transparent; }
 .compact-content { gap: 15px; }
 .display-title { max-width: 680px; margin: 13px 0 0; font: 500 clamp(2.25rem, 10vw, 4.7rem)/.92 var(--font-display), serif; letter-spacing: -.035em; }
 .display-title span { font-size: .55em; vertical-align: .24em; }
+.dramatic-title { position: relative; max-width: 680px; margin-bottom: 6px; padding-block: 17px; font-family: var(--font-luxe), serif; font-weight: 500; line-height: .9; text-shadow: 0 4px 28px rgba(0,0,0,.48); }
+.dramatic-title::before, .dramatic-title::after { content: ''; position: absolute; left: 50%; width: min(58%, 280px); height: 1px; transform: translateX(-50%); background: linear-gradient(90deg, transparent, rgba(216,189,131,.75), transparent); }
+.dramatic-title::before { top: 0; }
+.dramatic-title::after { bottom: 0; }
+.dramatic-title strong { display: block; margin-top: 7px; color: var(--gold-300); font-weight: 500; letter-spacing: -.02em; }
+.dramatic-title span { display: inline-block; margin: 11px 0 0 8px; font-size: .5em; vertical-align: middle; filter: sepia(.35); }
 .script-line { margin: 4px 0; color: var(--gold-300); font: 400 clamp(1.8rem, 7.5vw, 3rem)/1 var(--font-script), cursive; }
 .body-copy { margin: 5px 0 12px; font: 500 1rem/1.5 var(--font-display), serif; letter-spacing: .03em; }
 .cat-placeholder { position: relative; display: grid; width: min(60vw, 220px); aspect-ratio: 1.08; margin: 4px 0; place-items: center; border: 1px solid rgba(216,189,131,.45); border-radius: 50% 50% 4px 4px; background: linear-gradient(145deg, rgba(216,189,131,.12), rgba(255,255,255,.015)); }
