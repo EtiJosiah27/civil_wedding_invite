@@ -98,8 +98,8 @@ button { -webkit-tap-highlight-color: transparent; }
 .plea-line { margin: 23px 0 18px; font: 500 clamp(.92rem, 3.4vw, 1.1rem)/1.4 var(--font-display), serif; letter-spacing: .04em; }
 .pleading-placeholder { position: relative; display: grid; width: min(70vw, 260px); aspect-ratio: 1.4; margin: 0 0 23px; place-items: center; overflow: hidden; border: 1px solid rgba(216,189,131,.55); background: linear-gradient(145deg, rgba(216,189,131,.1), rgba(255,255,255,.018)); box-shadow: 0 16px 35px rgba(0,0,0,.3); transform: rotate(-1.7deg); }
 .pleading-placeholder::before { content: ''; position: absolute; z-index: 2; inset: 6px; border: 1px solid rgba(216,189,131,.3); pointer-events: none; }
-.pleading-placeholder img, .cat-placeholder img, .photo-slot img { width: 100%; height: 100%; object-fit: cover; }
-.pleading-placeholder img, .cat-placeholder img { position: absolute; inset: 0; }
+.pleading-placeholder img, .reaction-placeholder img, .photo-slot img { width: 100%; height: 100%; object-fit: cover; }
+.pleading-placeholder img, .reaction-placeholder img { position: absolute; inset: 0; }
 .placeholder-face { font-size: clamp(2.1rem, 10vw, 3.4rem); filter: sepia(.4); }
 .placeholder-label { position: absolute; bottom: 10px; font-size: .5rem; letter-spacing: .16em; opacity: .62; text-transform: uppercase; }
 .screen-index { display: none; }
@@ -108,7 +108,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .compact-content { gap: 15px; }
 .display-title { max-width: 680px; margin: 13px 0 0; font: 500 clamp(2.25rem, 10vw, 4.7rem)/.92 var(--font-display), serif; letter-spacing: -.035em; }
 .display-title span { font-size: .55em; vertical-align: .24em; }
-.dramatic-title { position: relative; max-width: 680px; margin-bottom: 6px; padding-block: 17px; font-family: var(--font-luxe), serif; font-weight: 500; line-height: .9; text-shadow: 0 4px 28px rgba(0,0,0,.48); }
+.dramatic-title { position: relative; max-width: 680px; margin-bottom: 6px; padding-block: 17px; font-family: var(--font-luxe), serif; font-size: clamp(1.75rem, 7.3vw, 3.5rem); font-weight: 500; line-height: .94; text-shadow: 0 4px 28px rgba(0,0,0,.48); }
 .dramatic-title::before, .dramatic-title::after { content: ''; position: absolute; left: 50%; width: min(58%, 280px); height: 1px; transform: translateX(-50%); background: linear-gradient(90deg, transparent, rgba(216,189,131,.75), transparent); }
 .dramatic-title::before { top: 0; }
 .dramatic-title::after { bottom: 0; }
@@ -116,10 +116,10 @@ button { -webkit-tap-highlight-color: transparent; }
 .dramatic-title span { display: inline-block; margin: 11px 0 0 8px; font-size: .5em; vertical-align: middle; filter: sepia(.35); }
 .script-line { margin: 4px 0; color: var(--gold-300); font: 400 clamp(1.8rem, 7.5vw, 3rem)/1 var(--font-script), cursive; }
 .body-copy { margin: 5px 0 12px; font: 500 1rem/1.5 var(--font-display), serif; letter-spacing: .03em; }
-.cat-placeholder { position: relative; display: grid; width: min(60vw, 220px); aspect-ratio: 1.08; margin: 4px 0; place-items: center; border: 1px solid rgba(216,189,131,.45); border-radius: 50% 50% 4px 4px; background: linear-gradient(145deg, rgba(216,189,131,.12), rgba(255,255,255,.015)); }
-.cat-placeholder::after { content: ''; position: absolute; inset: 7px; border: 1px solid rgba(216,189,131,.15); border-radius: inherit; }
-.cat-face { font-size: 4rem; filter: sepia(.45); }
-.cat-placeholder figcaption { position: absolute; bottom: 12px; font-size: .48rem; letter-spacing: .16em; opacity: .55; text-transform: uppercase; }
+.reaction-placeholder { position: relative; display: grid; width: min(70vw, 260px); aspect-ratio: 1.32; margin: 4px 0; place-items: center; overflow: hidden; border: 1px solid rgba(216,189,131,.5); background: linear-gradient(145deg, rgba(216,189,131,.12), rgba(255,255,255,.015)); box-shadow: 0 16px 35px rgba(0,0,0,.3); transform: rotate(1.2deg); }
+.reaction-placeholder::after { content: ''; position: absolute; z-index: 2; inset: 7px; border: 1px solid rgba(216,189,131,.24); pointer-events: none; }
+.reaction-face { font-size: 4rem; filter: sepia(.45); }
+.reaction-placeholder figcaption { position: absolute; bottom: 12px; font-size: .48rem; letter-spacing: .16em; opacity: .55; text-transform: uppercase; }
 
 .evidence-content { display: flex; min-height: calc(100svh - 28px); flex-direction: column; align-items: center; padding: 54px 25px 50px; text-align: center; }
 .evidence-title { font-size: clamp(2.2rem, 9vw, 4.4rem); }
