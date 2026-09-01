@@ -29,7 +29,7 @@ export const wedding: WeddingConfig = {
   personalMessage: '[A warm personal invitation message will go here.]',
   visuals: {
     pleadingImage: { src: '/pleading-cat.jpg', alt: 'A fluffy brown kitten looking up with enormous soulful eyes and its tiny paws clasped together as if begging' },
-    convincingImage: { src: '/pointing-woman.jpg', alt: 'An expressive older woman pointing directly at the viewer with a raised eyebrow' },
+    convincingImage: { src: '/pointing-woman-angry.jpg', alt: 'An angry older Black woman pointing directly at the viewer with furrowed brows and a stern expression' },
     evidencePhotos: [
       { src: null, alt: 'The couple clearly in love', caption: 'Clearly in love.' },
       { src: null, alt: 'The couple looking photogenic', caption: 'Occasionally photogenic.' },
