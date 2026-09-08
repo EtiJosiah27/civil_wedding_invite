@@ -199,7 +199,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .gift-options { display: grid; gap: 11px; }
 .gift-options .gold-button { width: 100%; }
 .transfer-note { display: block; margin: 17px 0 0; color: var(--gold-300); font: 500 .78rem/1.5 var(--font-display), serif; }
-.transfer-note strong { display: block; margin-top: 3px; color: var(--cream); font: 500 .92rem/1.5 var(--font-body), sans-serif; letter-spacing: .01em; user-select: all; }
+.transfer-note strong { display: block; margin-top: 9px; color: var(--cream); font: 500 .92rem/1.5 var(--font-body), sans-serif; letter-spacing: .01em; user-select: all; }
 @keyframes modal-fade { from { opacity: 0; } }
 @keyframes modal-rise { from { opacity: 0; transform: translateY(12px) scale(.98); } }
 
