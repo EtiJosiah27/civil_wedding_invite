@@ -196,7 +196,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .rsvp-form { display: grid; width: min(100%, 580px); gap: 18px; margin: 0 auto; text-align: left; }
 .rsvp-form > label, .rsvp-form legend { color: var(--gold-300); font-size: .62rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .rsvp-form label > span { opacity: .65; }
-.rsvp-form input:not([type='radio']), .rsvp-form textarea { width: 100%; margin-top: 8px; border: 1px solid rgba(216,189,131,.35); border-radius: 2px; outline: none; background: rgba(255,255,255,.035); color: var(--cream); padding: 12px 13px; font-size: .82rem; letter-spacing: 0; text-transform: none; transition: border-color .2s, box-shadow .2s; resize: vertical; }
+.rsvp-form input:not([type='radio']), .rsvp-form textarea { width: 100%; margin-top: 8px; border: 1px solid rgba(216,189,131,.35); border-radius: 2px; outline: none; background: rgba(255,255,255,.035); color: var(--cream); padding: 12px 13px; font-size: 1rem; letter-spacing: 0; text-transform: none; transition: border-color .2s, box-shadow .2s; resize: vertical; }
 .rsvp-form input::placeholder, .rsvp-form textarea::placeholder { color: rgba(247,238,220,.35); }
 .rsvp-form input:focus, .rsvp-form textarea:focus { border-color: var(--gold-300); box-shadow: 0 0 0 3px rgba(216,189,131,.08); }
 .rsvp-form fieldset { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 0; padding: 0; border: 0; }
