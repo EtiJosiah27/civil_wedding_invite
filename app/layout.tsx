@@ -8,7 +8,7 @@ const script = Italianno({ variable: '--font-script', subsets: ['latin'], weight
 const names = Parisienne({ variable: '--font-names', subsets: ['latin'], weight: '400' });
 const luxe = Bodoni_Moda({ variable: '--font-luxe', subsets: ['latin'], weight: ['400', '500', '600'] });
 
-const siteUrl = 'https://etieno-ugo-wedding-invitation.etijosiah27.chatgpt.site';
+const siteUrl = 'https://our-civil-wedding.etijosiah27.chatgpt.site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
