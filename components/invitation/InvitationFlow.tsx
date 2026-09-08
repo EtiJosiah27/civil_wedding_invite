@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ConfirmationScreen } from './ConfirmationScreen';
 import { EnvelopeScreen } from './EnvelopeScreen';
 import { EvidenceScreen } from './EvidenceScreen';
@@ -16,6 +16,32 @@ export function InvitationFlow({ activeScreen, onScreenChange }: InvitationFlowP
   const [musicStarted, setMusicStarted] = useState(false);
   const [musicMuted, setMusicMuted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const resumeMusicRef = useRef(false);
+  useEffect(() => {
+    const pauseForBackground = () => {
+      const audio = audioRef.current;
+      if (audio && !audio.paused) {
+        resumeMusicRef.current = true;
+        audio.pause();
+      }
+    };
+    const resumeFromBackground = () => {
+      const audio = audioRef.current;
+      if (audio && resumeMusicRef.current && !document.hidden) {
+        resumeMusicRef.current = false;
+        void audio.play().catch(() => undefined);
+      }
+    };
+    const handleVisibility = () => document.hidden ? pauseForBackground() : resumeFromBackground();
+    document.addEventListener('visibilitychange', handleVisibility);
+    window.addEventListener('pagehide', pauseForBackground);
+    window.addEventListener('pageshow', resumeFromBackground);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibility);
+      window.removeEventListener('pagehide', pauseForBackground);
+      window.removeEventListener('pageshow', resumeFromBackground);
+    };
+  }, []);
   const next = (screen: number) => { onScreenChange(screen); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const goBack = () => { if (activeScreen === 1) setEnvelopeVersion((version) => version + 1); next(Math.max(0, activeScreen - 1)); };
   const startMusic = () => {
@@ -40,6 +66,7 @@ export function InvitationFlow({ activeScreen, onScreenChange }: InvitationFlowP
   };
   const closeInvitation = () => {
     const audio = audioRef.current;
+    resumeMusicRef.current = false;
     if (audio) {
       audio.pause();
       audio.currentTime = 0;
