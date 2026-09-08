@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { wedding } from '@/data/wedding';
 
-export function EnvelopeScreen({ active, onOpened }: { active: boolean; onOpened: () => void }) {
+export function EnvelopeScreen({ active, onOpenStart, onOpened }: { active: boolean; onOpenStart: () => void; onOpened: () => void }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function openEnvelope() {
     if (isOpen) return;
+    onOpenStart();
     setIsOpen(true);
     window.setTimeout(onOpened, 950);
   }
