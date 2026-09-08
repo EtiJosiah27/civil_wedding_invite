@@ -216,6 +216,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .rsvp-summary p:last-child { border-bottom: 0; }
 .rsvp-summary span { color: var(--gold-300); font: 600 .52rem/1.5 var(--font-body), sans-serif; letter-spacing: .18em; text-transform: uppercase; text-align: left; }
 .tiny-note { max-width: 360px; color: rgba(247,238,220,.42); font-size: .66rem; line-height: 1.6; }
+.close-invitation { margin-top: 17px; }
 
 @media (min-width: 700px) {
   .ornate-frame { width: min(calc(100% - 64px), 900px); min-height: calc(100svh - 64px); margin: 32px auto; }
