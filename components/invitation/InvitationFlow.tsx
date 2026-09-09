@@ -79,7 +79,7 @@ export function InvitationFlow({ activeScreen, onScreenChange }: InvitationFlowP
     }, 120);
   };
   const submitRsvp = async (data: RsvpData) => {
-    const response = await fetch('/api/rsvp', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+    const response = await fetch('/.netlify/functions/rsvp', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
     if (!response.ok) throw new Error('RSVP submission failed');
     setRsvp(data); next(6);
   };
